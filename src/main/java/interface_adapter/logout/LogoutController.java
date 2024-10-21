@@ -8,7 +8,7 @@ import use_case.logout.LogoutInputData;
  */
 public class LogoutController {
 
-    private LogoutInputBoundary logoutUseCaseInteractor;
+    private final LogoutInputBoundary logoutUseCaseInteractor;
 
     public LogoutController(LogoutInputBoundary logoutUseCaseInteractor) {
         // TODO: Save the interactor in the instance variable.
@@ -25,6 +25,5 @@ public class LogoutController {
         // 2. tell the Interactor to execute.
         final LogoutInputData inputData = new LogoutInputData(username);
         logoutUseCaseInteractor.execute(inputData);
-
     }
 }
